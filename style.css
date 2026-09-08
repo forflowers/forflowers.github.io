@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f5;
+    color: #1d1d1f;
+    line-height: 1.65;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.narrow {
+    max-width: 760px;
+}
+
+.site-header {
+    background: rgba(247, 247, 245, 0.95);
+    border-bottom: 1px solid #deded9;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+.hero {
+    padding: 120px 0 110px;
+}
+
+.eyebrow,
+.section-label,
+.project-type {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #666;
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.95;
+    margin: 20px 0 28px;
+    letter-spacing: -0.05em;
+}
+
+.hero-text {
+    max-width: 750px;
+    font-size: 1.25rem;
+    color: #505050;
+}
+
+.hero-links {
+    display: flex;
+    gap: 14px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.primary {
+    background: #171717;
+    color: white;
+}
+
+.secondary {
+    border: 1px solid #aaa;
+    background: white;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.05;
+    margin: 12px 0 30px;
+    letter-spacing: -0.035em;
+}
+
+.projects-section {
+    background: white;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 32px;
+    min-height: 310px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card h3 {
+    font-size: 1.7rem;
+    margin: 12px 0;
+}
+
+.project-card p {
+    color: #555;
+}
+
+.project-card a {
+    margin-top: auto;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    padding: 45px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+@media (max-width: 700px) {
+
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 0;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
