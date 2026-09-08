@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andromeda Galaxy Rotation Analysis | Victoria Flores</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav">
+        <a class="name" href="../index.html">Victoria Flores</a>
+
+        <nav>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="https://forflowers.github.io/Resume/" target="_blank">
+                Resume
+            </a>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="project-hero">
+        <div class="container narrow">
+
+            <a class="back-link" href="../index.html#projects">
+                ← Back to projects
+            </a>
+
+            <p class="eyebrow">
+                Astronomy • Scientific Computing • Data Analysis
+            </p>
+
+            <h1 class="project-title">
+                Andromeda Galaxy Rotation Analysis
+            </h1>
+
+            <p class="project-intro">
+                A Python-based analysis of observational rotation data from
+                the Andromeda Galaxy, comparing measured rotational velocities
+                with a simplified theoretical model of galactic motion.
+            </p>
+
+            <div class="project-meta">
+                <span>Python</span>
+                <span>pandas</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+                <span>SciPy</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- OVERVIEW -->
+    <section class="project-section">
+        <div class="container narrow">
+
+            <p class="section-label">Overview</p>
+            <h2>Project Overview</h2>
+
+            <p>
+                This project was completed as part of my coursework at the
+                University of California, Riverside. I used Python to analyze
+                observational data associated with Vera C. Rubin and
+                W. Kent Ford Jr.'s study of the rotation of the Andromeda
+                Galaxy.
+            </p>
+
+            <p>
+                The goal was to examine how rotational velocity changes with
+                distance from the center of the galaxy and compare the
+                observational measurements with a simplified theoretical model.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- SCIENTIFIC CONTEXT -->
+    <section class="project-section alternate">
+        <div class="container narrow">
+
+            <p class="section-label">Scientific Context</p>
+            <h2>Galactic Rotation</h2>
+
+            <p>
+                The Andromeda Galaxy, also known as M31, is a nearby spiral
+                galaxy whose rotational motion can be studied by measuring the
+                velocity of material at different distances from its center.
+            </p>
+
+            <p>
+                In this analysis, the galaxy was divided into an inner region
+                and an outer region. The observational data were then compared
+                with mathematical models describing how rotational velocity
+                should behave in each region.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- DATA + METHODS -->
+    <section class="project-section">
+        <div class="container narrow">
+
+            <p class="section-label">Methods</p>
+            <h2>Data Processing and Modeling</h2>
+
+            <p>
+                I imported the observational dataset from a CSV file using
+                <strong>pandas</strong>. The dataset contained measurements of
+                distance from the galactic center, in arcminutes, and
+                rotational velocity, in kilometers per second.
+            </p>
+
+            <p>
+                I divided the dataset at a bulge radius of
+                <strong>1.6 arcminutes</strong>, separating the measurements
+                into inner and outer galactic regions.
+            </p>
+
+            <p>
+                For the inner region, I modeled rotational velocity as
+                increasing linearly with radius:
+            </p>
+
+            <div class="equation">
+                V(r) = Ar
+            </div>
+
+            <p>
+                I used <strong>SciPy's curve_fit</strong> function to determine
+                the best-fit value of the parameter A from the inner-region
+                observational data.
+            </p>
+
+            <p>
+                I then used that fitted parameter to construct a theoretical
+                model for the outer region:
+            </p>
+
+            <div class="equation">
+                V(r) = A R<sub>bulge</sub><sup>3/2</sup> / √r
+            </div>
+
+            <p>
+                <strong>NumPy</strong> was used to generate smooth ranges of
+                values for the model curves, while <strong>Matplotlib</strong>
+                was used to visualize both the observational data and the
+                theoretical predictions.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- WORKFLOW -->
+    <section class="project-section alternate">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="section-label">Workflow</p>
+                <h2>Analysis Process</h2>
+            </div>
+
+            <div class="workflow-grid">
+
+                <div class="workflow-card">
+                    <span>01</span>
+                    <h3>Import Data</h3>
+                    <p>
+                        Read the observational dataset from a CSV file using
+                        pandas.
+                    </p>
+                </div>
+
+                <div class="workflow-card">
+                    <span>02</span>
+                    <h3>Separate Regions</h3>
+                    <p>
+                        Divide the measurements into inner and outer regions
+                        using a bulge radius of 1.6 arcminutes.
+                    </p>
+                </div>
+
+                <div class="workflow-card">
+                    <span>03</span>
+                    <h3>Fit Inner Model</h3>
+                    <p>
+                        Use SciPy curve fitting to determine the best-fit
+                        parameter for the inner rotation model.
+                    </p>
+                </div>
+
+                <div class="workflow-card">
+                    <span>04</span>
+                    <h3>Model Outer Region</h3>
+                    <p>
+                        Use the fitted parameter to calculate the predicted
+                        outer rotation curve.
+                    </p>
+                </div>
+
+                <div class="workflow-card">
+                    <span>05</span>
+                    <h3>Visualize Results</h3>
+                    <p>
+                        Plot the observational measurements and theoretical
+                        models together using Matplotlib.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- RESULTS -->
+    <section class="project-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="section-label">Results</p>
+                <h2>Rotation Curve Comparison</h2>
+
+                <p>
+                    The final visualization compares the measured rotational
+                    velocities with the fitted inner model and theoretical
+                    outer model.
+                </p>
+            </div>
+
+            <div class="figure-placeholder">
+                <p>
+                    Your final Andromeda rotation-curve plot will go here.
+                </p>
+
+                <p class="small-text">
+                    We will replace this box with your actual Matplotlib figure
+                    after you save and upload it.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- INTERPRETATION -->
+    <section class="project-section alternate">
+        <div class="container narrow">
+
+            <p class="section-label">Interpretation</p>
+            <h2>Comparing Prediction and Observation</h2>
+
+            <p>
+                The outer-region model predicts a decrease in rotational
+                velocity as distance from the center of the galaxy increases.
+                The observational measurements can be compared directly with
+                this predicted behavior.
+            </p>
+
+            <p>
+                Differences between the theoretical prediction and observed
+                galactic rotation provide a way to investigate whether the
+                distribution of visible matter alone is sufficient to explain
+                the galaxy's motion.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="project-section">
+        <div class="container narrow">
+
+            <p class="section-label">Skills</p>
+            <h2>Tools Used</h2>
+
+            <div class="skills-list">
+                <span>Python</span>
+                <span>pandas</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+                <span>SciPy</span>
+                <span>CSV Data Processing</span>
+                <span>Curve Fitting</span>
+                <span>Scientific Visualization</span>
+                <span>Astronomical Data Analysis</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TAKEAWAYS -->
+    <section class="project-section alternate">
+        <div class="container narrow">
+
+            <p class="section-label">Takeaways</p>
+            <h2>What I Learned</h2>
+
+            <p>
+                This project strengthened my experience working with scientific
+                data in Python and introduced me to computational curve fitting
+                using SciPy.
+            </p>
+
+            <p>
+                It also gave me experience combining observational astronomy,
+                mathematical modeling, data visualization, and scientific
+                interpretation within a single analysis.
+            </p>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="container">
+        <p>
+            Victoria Flores • University of California, Riverside
+        </p>
+
+        <p>
+            <a href="mailto:vflor095@ucr.edu">
+                vflor095@ucr.edu
+            </a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
