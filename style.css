@@ -195,3 +195,155 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* -------------------------
+   PROJECT PAGES
+------------------------- */
+
+.project-hero {
+    padding: 100px 0 80px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 50px;
+    text-decoration: none;
+    color: #666;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    color: #000;
+}
+
+.project-title {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1;
+    margin: 18px 0 20px;
+    letter-spacing: -0.05em;
+}
+
+.project-intro {
+    font-size: 1.25rem;
+    color: #555;
+    max-width: 760px;
+}
+
+.project-meta,
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+.project-meta span,
+.skills-list span {
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    padding: 7px 13px;
+    font-size: 0.85rem;
+    background: white;
+}
+
+.project-section {
+    padding: 80px 0;
+}
+
+.project-section.alternate {
+    background: white;
+}
+
+.project-section h2 {
+    font-size: clamp(2rem, 5vw, 3.3rem);
+    line-height: 1.1;
+    margin: 10px 0 30px;
+    letter-spacing: -0.035em;
+}
+
+.project-section p {
+    font-size: 1.08rem;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 45px;
+}
+
+.equation {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+    margin: 25px 0;
+    background: #f4f4f1;
+    border-radius: 10px;
+}
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.workflow-card {
+    background: #f7f7f5;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.workflow-card span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #777;
+}
+
+.workflow-card h3 {
+    margin: 10px 0;
+}
+
+.workflow-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.figure-placeholder {
+    max-width: 900px;
+    min-height: 450px;
+    margin: 0 auto;
+    border: 2px dashed #bbb;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fafafa;
+    padding: 30px;
+}
+
+.small-text {
+    font-size: 0.9rem !important;
+    color: #777;
+}
+
+@media (max-width: 900px) {
+    .workflow-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .workflow-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-hero {
+        padding: 70px 0 60px;
+    }
+
+    .project-section {
+        padding: 60px 0;
+    }
+}
